@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Bootstrap 4 equal columns example.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/toaster-js/default.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            padding-top: 25px;
+        }
+        .btn-group-vertical{
+            width: 100% !important;
+        }
+        .btn {
+            width: 100% !important;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-success" id="populationBigger">Population - bigger than 500.000</button>
+                <button type="button" class="btn btn-success" id="landAreaLess">land area - less than 1000</button>
+                <button type="button" class="btn btn-primary" id="isPopulationLess">Does any city has population less than 100.000?</button>
+                <button type="button" class="btn btn-primary" id="isLandBigger">Does every city has land area bigger than 100?</button>
+                <button type="button" class="btn btn-danger" id="reset">RESET</button>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Select City</label>
+                </div>
+                <select class="custom-select" id="custom-select">
+                    <option selected>Choose...</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <table class="table" id="allcities">
+                <thead class="thead-dark">
+                <tr>
+                    <th>City</th>
+                    <th>Population</th>
+                    <th>Land Area</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <h3 style="margin-top:50px">Found Item</h3>
+            <table class="table" id="singlecity">
+                <thead class="thead-dark">
+                <tr>
+                    <th>City</th>
+                    <th>Population</th>
+                    <th>Land Area</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="module" src="./main.js"></script>
+<script type="module" src="./script.js"></script>
+<script type="text/javascript" src="https://unpkg.com/toaster-js/umd.js"></script>
+</body>
+</html>
